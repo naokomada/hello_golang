@@ -1,8 +1,10 @@
 package multi
 
 import "testing"
+// import "fmt"
 
 func multi(a, b int) int {
+	// fmt.Print("multi")
 	return a * b
 }
 
