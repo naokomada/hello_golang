@@ -6,9 +6,10 @@ services:
       context: .
       dockerfile: ./docker/Dockerfile
     volumes:
-      - ./hello_golang:/go/src/hello_golang
-    tty: true # コンテナの永続化
+      - ./src:/go/src/hello_golang
     env_file: # .envファイル
       - ./docker/.env
     environment:
       - TZ=Asia/Tokyo
+    #command: sh -c "go run /go/src/hello_golang/cmd/hello/main.go"
+    command: sh -c "go test -v /go/src/hello_golang/test/main_test.go"
