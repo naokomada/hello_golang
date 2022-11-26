@@ -13,4 +13,5 @@ services:
       - TZ=Asia/Tokyo
     #command: sh -c "go run /go/src/hello_golang/cmd/hello/main.go"
     #command: sh -c "go test -v /go/src/hello_golang/test/main_test.go"
-    command: sh -c "go test -v /go/src/hello_golang/test/multi_test.go"
+    #command: sh -c "go test -v /go/src/hello_golang/test/multi_test.go"
+    command: sh -c "go test -v /go/src/hello_golang/test/slicetest_test.go"
