@@ -5,9 +5,11 @@ import "reflect"
 import "fmt"
 
 func m_slice(a, b, c string) []string {
-	fruits := []string{a, b, c}
-    fmt.Println(fruits)
-	fmt.Println(reflect.TypeOf(fruits))
+	fruits := []string{a, b}
+	fruits = append(fruits, c)
+    fmt.Println("fruits: ", fruits)
+	fmt.Println("type of fruits: ", reflect.TypeOf(fruits))
+	fmt.Println("length: ", len(fruits), "capacity: ", cap(fruits))
 	return fruits
 }
 
